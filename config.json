@@ -1,0 +1,25 @@
+{
+  "app": {
+    "name": "SMS Spam Detector",
+    "version": "1.1.0",
+    "debug": true,
+    "host": "0.0.0.0",
+    "port": 5000
+  },
+  "model": {
+    "path": "notebooks/spam_classifier.pkl",
+    "vectorizer_path": "notebooks/tfidf_vectorizer.pkl",
+    "threshold": 0.5,
+    "max_message_length": 5000
+  },
+  "features": {
+    "use_text_features": true,
+    "use_ngram_features": true,
+    "ngram_max_features": 1000,
+    "min_word_length": 2
+  },
+  "logging": {
+    "level": "INFO",
+    "file": "logs/app.log"
+  }
+}
