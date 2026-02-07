@@ -1,4 +1,4 @@
-# src/models.py - Model training and evaluation
+# - Model training and evaluation
 import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split, cross_val_score, GridSearchCV

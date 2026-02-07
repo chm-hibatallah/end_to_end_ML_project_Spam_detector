@@ -1,4 +1,4 @@
-# src/feature_engineering.py - Feature extraction for SMS spam detection
+# - Feature extraction for SMS spam detection
 import re
 import string
 import numpy as np
@@ -13,7 +13,7 @@ from sklearn.decomposition import TruncatedSVD
 import warnings
 warnings.filterwarnings('ignore')
 
-# Download NLTK data if not already downloaded
+# Download NLTK 
 try:
     nltk.data.find('tokenizers/punkt')
     nltk.data.find('corpora/stopwords')
@@ -32,7 +32,7 @@ class FeatureExtractor:
         self.stop_words = set(stopwords.words('english'))
         self.lemmatizer = WordNetLemmatizer()
         
-        # Spam-related keywords (can be extended)
+        # Spam-related keywords 
         self.spam_keywords = {
             'free', 'win', 'winner', 'won', 'cash', 'prize', 'click', 'call', 
             'now', 'urgent', 'congratulations', 'selected', 'award', 'bonus',
@@ -303,12 +303,7 @@ class AdvancedFeatureEngineer:
         Returns:
             np.ndarray: Semantic feature matrix
         """
-        # This is a simplified version. In production, you might use:
-        # 1. Word2Vec/GloVe embeddings
-        # 2. BERT embeddings
-        # 3. Sentence transformers
         
-        # For now, we'll create simplified semantic features
         features = []
         
         for text in texts:

@@ -23,8 +23,7 @@ def train_and_save_model():
     try:
         df = pd.read_csv('data/spam.csv', encoding='latin-1')
         
-        # The CSV typically has columns: v1 (label), v2 (message)
-        # Keep only the first two columns
+        
         df = df.iloc[:, 0:2]
         df.columns = ['label', 'message']
         
